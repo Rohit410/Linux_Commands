@@ -6,7 +6,6 @@
 6) sudo  -i / sudo su - (to switch to root user)
 7) tty
 ****************************************************************************************************
-Lecture-2
 8) id
 9) users (Give the active users on the server)
 10) groups (Give the groups in which user is added)
