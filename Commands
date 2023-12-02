@@ -82,9 +82,9 @@
       - mkdir rohit
       - mkdir rohit/singhal/test (mkdir: cannot create directory ‘rohit/singhal/test’: No such 
         file or directory)
-      - mkdir -p rohit/singhal/test (it will make singhal directory then test directory inside 
+      - mkdir -p rohit/singhal/test (it will create singhal directory then test directory inside 
         singhal)
-      - mkdir -p rohit/singhal/test/{test1/{test1.1,test1.2},test2} (Make test1 directory and 
+      - mkdir -p rohit/singhal/test/{test1/{test1.1,test1.2},test2} (Create test1 directory and 
         inside test1 it will create test1.1,test1.2)
 48) rmdir (Remove directory) 
       - rmdir <directory name> (Remove empty directory)
