@@ -1,1 +1,1 @@
-# Linux_command
+Common Linux commands for everyday tasks.
