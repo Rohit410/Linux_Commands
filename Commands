@@ -1,0 +1,210 @@
+1) uname (Give the information of machine)
+2) man (manual)
+3) hostname
+4) whoami
+5) sudo 
+6) sudo  -i / sudo su - (to switch to root user)
+7) tty
+****************************************************************************************************
+Lecture-2
+8) id
+9) users (Give the active users on the server)
+10) groups (Give the groups in which user is added)
+11) adduser (Add new user)
+12) addgroup
+13) usermod (User modify)
+      - usermod -a -G <group name> <user>(add user in some other secondary group)
+      - usermod -G <group name > <user> (Ad this user to given group and remove it   
+        from all other group except primary one)
+      - usermod -a -g <group name> <user> (Change the primary group of user)
+14) deluser
+15) delgroup
+16) useradd (This command doesn’t provide the guide)
+17) groupadd (This command doesn’t provide the guide)
+18) userdel (This command doesn’t provide the guide)
+19) groupdel (This command doesn’t provide the guide)
+20) su (Switch user)
+21) exit
+22) clear
+23) passwd (change the password of user)
+****************************************************************************************************
+24) date (Check the machine date, set the date )
+      - sudo date -s 2023-11-04 12:30:00 (Setting date and time for the machine)
+25) cal (Calendar)
+      - cal 2023
+      - cal 1 2019 (January 2019 month calendar)
+26) echo (To print)
+      - echo “Rohit Singhal”    output=>Rohit Singhal
+      - echo “Rohit \tSinghal”    output=>Rohit \tSinghal
+      - echo -e “Rohit \tSinghal”    output=>Rohit   Singhal
+27) pwd (present working directory)
+28) cd
+29) touch (to create new file and update modified time of  file )
+30) bc (basic calculator)
+****************************************************************************************************
+31) head (To see the starting lines of file)  head -15 file.txt
+32) tail (To see the last lines of file)  tail -15 file.txt and to check the continuous status of 33) tail -f file.txt (use case monitor logs file)
+34) more (it shows percentage as you scroll down and you can’t scroll up)
+35) less (The less can be used to read contents of text file one page (one screen) per
+      time, you can scroll up and down)
+36) wc (word count)(It is used to find out number of lines, word count, byte and  
+      characters count in the files)
+37) cut (cut -f 1 -d ‘.’ file.txt)
+38) file (Tell’s about the file type)
+39) who (About the user information)
+40) sort ()
+****************************************************************************************************
+41) cat (to print the file , take input and print it)
+42) std input (<)
+      - cat < file.txt
+43) std output (>)(cat > result.txt)
+      - cat < test.txt > result.txt  (taking input from test.txt and put it into result.txt)
+44) std error
+      - lsssss > error.txt (nothing will be print in error.txt file as it will take error message)
+      - #0-> std input, 1-> std output, 2-> std error
+      - lsssss 2> error.txt (Now error message will be print in error.txt file)
+      - ls 2> error.txt (Nothing will print in error.txt file as it only print the error)
+      - cat > file.txt (It will replace the existing content of file.txt with the new one)
+      - cat >> file.txt (It will append the content in file.txt)
+      - ls > output.txt 2> error.txt (error in error.txt and normal content in output.txt)
+      - ls >> output.txt 2>&1 (Will print both error and normal output in the same file)
+ 45) sort (sort the file content or the content you provide to it)
+       - sort test.txt (it will print the content of test.txt file in ascending order but it will not 
+       sort the content inside the file)
+       - sort - test.txt (it will take the input from keyboard and test.txt file and merge it and 
+       sort it)
+46) who (tell about the user)
+****************************************************************************************************
+47) mkdir (Make directory)
+      - mkdir rohit
+      - mkdir rohit/singhal/test (mkdir: cannot create directory ‘rohit/singhal/test’: No such 
+        file or directory)
+      - mkdir -p rohit/singhal/test (it will make singhal directory then test directory inside 
+        singhal)
+      - mkdir -p rohit/singhal/test/{test1/{test1.1,test1.2},test2} (Make test1 directory and 
+        inside test1 it will create test1.1,test1.2)
+48) rmdir (Remove directory) 
+      - rmdir <directory name> (Remove empty directory)
+49) rm
+      - rm <file name>
+      - rm -r <directpry name> (Remove both empty and non-empty directory)
+      - rm -rf <directory> (Remove forcefully)
+50) ls
+      - ls (1.txt  error.txt  output.txt  rohit  test.txt  test2.txt)
+      - ls -l or ls -ltr
+        (total 24
+        -rw-rw-r-- 1 ubuntu ubuntu  187 Nov  4 15:21 1.txt
+        -rw-rw-r-- 1 ubuntu ubuntu   36 Nov  5 06:34 output.txt
+        -rw-rw-r-- 1 ubuntu ubuntu  230 Nov  5 06:35 error.txt
+        -rw-rw-r-- 1 ubuntu ubuntu   51 Nov  5 06:46 test.txt
+        -rw-rw-r-- 1 ubuntu ubuntu   51 Nov  5 06:46 test2.txt
+        drwxrwxr-x 3 ubuntu ubuntu 4096 Nov  5 07:17 rohit)
+      - ll 
+        (total 68
+        drwxr-x--- 5 ubuntu ubuntu 4096 Nov  5 07:14 ./
+        drwxr-xr-x 5 root   root   4096 Nov  4 13:32 ../
+        -rw------- 1 ubuntu ubuntu   33 Nov  4 13:06 .bash_history
+        -rw-r--r-- 1 ubuntu ubuntu  220 Jan  6  2022 .bash_logout
+        -rw-r--r-- 1 ubuntu ubuntu 3771 Jan  6  2022 .bashrc
+        drwx------ 2 ubuntu ubuntu 4096 Nov  4 11:28 .cache/
+        -rw------- 1 ubuntu ubuntu   20 Nov  4 15:22 .lesshst
+        -rw-r--r-- 1 ubuntu ubuntu  807 Jan  6  2022 .profile
+        drwx------ 2 ubuntu ubuntu 4096 Nov  4 11:28 .ssh/
+        -rw-r--r-- 1 ubuntu ubuntu    0 Nov  4 12:04 .sudo_as_admin_successful
+        -rw------- 1 ubuntu ubuntu 5861 Nov  5 06:46 .viminfo
+        -rw-rw-r-- 1 ubuntu ubuntu  187 Nov  4 15:21 1.txt
+        -rw-rw-r-- 1 ubuntu ubuntu  230 Nov  5 06:35 error.txt
+        -rw-rw-r-- 1 ubuntu ubuntu   36 Nov  5 06:34 output.txt
+        drwxrwxr-x 3 ubuntu ubuntu 4096 Nov  5 07:17 rohit/
+        -rw-rw-r-- 1 ubuntu ubuntu   51 Nov  5 06:46 test.txt
+        -rw-rw-r-- 1 ubuntu ubuntu   51 Nov  5 06:46 test2.txt) 
+      - ls -lh (human-readable print sizes like 1K 234M 2G etc)
+        (total 24K
+        -rw-rw-r-- 1 ubuntu ubuntu  187 Nov  4 15:21 1.txt
+        -rw-rw-r-- 1 ubuntu ubuntu  230 Nov  5 06:35 error.txt
+        -rw-rw-r-- 1 ubuntu ubuntu   36 Nov  5 06:34 output.txt
+        drwxrwxr-x 3 ubuntu ubuntu 4.0K Nov  5 07:17 rohit
+        -rw-rw-r-- 1 ubuntu ubuntu   51 Nov  5 06:46 test.txt
+        -rw-rw-r-- 1 ubuntu ubuntu   51 Nov  5 06:46 test2.txt)
+      - ls -l t* (file starting with b character)      
+      -  ls -l [!d]* (file not started with d)
+
+51) what is  -rw-rw-r– file.txt (-ugo)
+      -  (if empty means regular file, d means directory)
+      - - - (u=>user/owner permission)(rwx =>read write executable)
+      - - - (g=> group member permission)
+      - - - (o=>other person permission)
+      By default file doesn’t have executable permission and directory have executable 
+      file unless you can’t open that.
+
+****************************************************************************************************
+52) ln (create the link) (link)
+      - ln -s /tmp ~/test (Create soft link of /tmp directory in home directory(~))
+      - ln /tmp/test.txt ~/my_shortcut.txt (it is hard link, if we create a hard link to the file 
+        and then delete the file, we can still access the file using the hard link)
+53) Dangling pointer=> Dangling pointers and wild pointers in computer programming 
+      are pointers that do not point to a valid object of the appropriate type. Suppose you 
+      create soft link and then delete the file so that soft link will point to object which is 
+      not exist.
+54) cp (copy files and directory)
+55) mv (move files and directory)
+****************************************************************************************************
+56) Read/write/executable (r/w/x)
+        4 - r - read
+        2 - w - write
+        1 - x - executable    
+        7=> all permission, 6=> read write, 3=> write executable
+57) chmod (change mode)(to change the permission of file)
+      - chmod g+r file.txt (Give the read permission of file to group)
+      - chmod o-r file.txt (Take the read permission of file from others)
+      - chmod go+x file.txt (Give the executable permission of file to group and others )
+      - chmod 700 file.txt (Give all permission to owner and no permission to others and 
+        groups)
+      - chmod works the same for directory also.
+ ****************************************************************************************************
+58) setuid/setgid/sticky
+      4 - setuid
+      2 - setgid
+      1 - sticky
+      chmod 2777 <directory name>
+- setuid => This bit is present for files which have executable permissions. The setuid bit 
+  simply indicates that when running the executable, it will set its permissions to that of 
+  the user who created it (owner), instead of setting it to the user who launched it.
+- setgid =>The setgid affects both files as well as directories. When used on a file, it    
+  executes with the privileges of the group of the user who owns it instead of executing 
+  with those of the group of the user who executed it.
+  When the bit is set for a directory, the set of files in that directory will have the same 
+  group as the group of the parent directory, and not that of the user who created those 
+  files
+- sticky bit => chmod 1777 <directory name> ( this make sure that user only can 
+  delete the file owned by him present in the directory)
+59) which
+****************************************************************************************************
+60) umask (user file-creation mode mask)
+      - The umask command specifies the permissions that the user does not want to be 
+        given out to the newly created file or directory.
+      - umask works by doing a Bitwise AND with the bitwise complement(where the bits    
+        are inverted, i.e. 1 becomes 0 and 0 becomes 1) of the umask.
+      - The bits which are set in the umask value, refer to the permissions, which are not 
+        assigned by default, as these values are subtracted from the maximum permission 
+        for files/directories.
+61) chgrp(change group)
+      - chgrp <group name> <file name>
+62) chown(change owner)
+      - chown <owner name> <file name>
+      - chown <user name>:<group name> <file name>*
+****************************************************************************************************
+63) mount (to mount the disk)
+      - sudo mount <partition> <mount_point_directory> 
+64) unmount (Unmount the disk)
+      - sudo umount <mount_point_directory>
+65) mountpoint (check that folder is mount with some disk or not )
+      - mountpoint <directory name>
+66) du (disk usage)(estimating file and directory space usage)
+      - du -h <file name>
+67) df (disk free)(give information about file system disk space utilization)
+      - df -h
+      - It tells you the total disk size, space used, space available, usage percentage, and 
+        what partition the disk is mounted on
+68) lsblk (display information about block devices)
+69) fdisk ()
