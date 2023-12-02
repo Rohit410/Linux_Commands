@@ -1,4 +1,4 @@
-1) uname (Give the information of machine)
+1) uname (Provide details about the machine)
 2) man (manual)
 3) hostname
 4) whoami
@@ -7,13 +7,13 @@
 7) tty
 ****************************************************************************************************
 8) id
-9) users (Give the active users on the server)
-10) groups (Give the groups in which user is added)
+9) users (Provide the list of active users on the server)
+10) groups (Provide the list of groups in which user is added)
 11) adduser (Add new user)
 12) addgroup
 13) usermod (User modify)
-      - usermod -a -G <group name> <user>(add user in some other secondary group)
-      - usermod -G <group name > <user> (Ad this user to given group and remove it   
+      - usermod -a -G <group name> <user> (add user in some other secondary group)
+      - usermod -G <group name > <user> (Add this user to given group and remove it   
         from all other group except primary one)
       - usermod -a -g <group name> <user> (Change the primary group of user)
 14) deluser
@@ -41,13 +41,17 @@
 29) touch (to create new file and update modified time of  file )
 30) bc (basic calculator)
 ****************************************************************************************************
-31) head (To see the starting lines of file)  head -15 file.txt
-32) tail (To see the last lines of file)  tail -15 file.txt and to check the continuous status of 33) tail -f file.txt (use case monitor logs file)
+31) head (To see the starting lines of file) 
+    - head -15 file.txt
+32) tail (To see the last lines of file)  
+    - tail -15 file.txt and 
+33) To check the continuous status of file 
+    - tail -f file.txt (use case=> monitor logs file)
 34) more (it shows percentage as you scroll down and you can’t scroll up)
-35) less (The less can be used to read contents of text file one page (one screen) per
-      time, you can scroll up and down)
+35) less (The less can be used to read contents of text file one page or one screen per
+    time, you can scroll up and down)
 36) wc (word count)(It is used to find out number of lines, word count, byte and  
-      characters count in the files)
+    characters count in the files)
 37) cut (cut -f 1 -d ‘.’ file.txt)
 38) file (Tell’s about the file type)
 39) who (About the user information)
@@ -55,9 +59,9 @@
 ****************************************************************************************************
 41) cat (to print the file , take input and print it)
 42) std input (<)
-      - cat < file.txt
+    - cat < file.txt
 43) std output (>)(cat > result.txt)
-      - cat < test.txt > result.txt  (taking input from test.txt and put it into result.txt)
+    - cat < test.txt > result.txt  (taking input from test.txt and put it into result.txt)
 44) std error
       - lsssss > error.txt (nothing will be print in error.txt file as it will take error message)
       - #0-> std input, 1-> std output, 2-> std error
@@ -72,9 +76,9 @@
        sort the content inside the file)
        - sort - test.txt (it will take the input from keyboard and test.txt file and merge it and 
        sort it)
-46) who (tell about the user)
+46) who (Provide the details about the user)
 ****************************************************************************************************
-47) mkdir (Make directory)
+47) mkdir (To create a new directory)
       - mkdir rohit
       - mkdir rohit/singhal/test (mkdir: cannot create directory ‘rohit/singhal/test’: No such 
         file or directory)
@@ -187,9 +191,9 @@
       - The bits which are set in the umask value, refer to the permissions, which are not 
         assigned by default, as these values are subtracted from the maximum permission 
         for files/directories.
-61) chgrp(change group)
+61) chgrp(change the group of file)
       - chgrp <group name> <file name>
-62) chown(change owner)
+62) chown(change the ownership of file)
       - chown <owner name> <file name>
       - chown <user name>:<group name> <file name>*
 ****************************************************************************************************
